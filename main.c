@@ -1,6 +1,8 @@
 #include "main.h"
 
 #include <stdio.h>
+#include <stdbool.h>
+
 /*
   Commentaire
   Ici un commentaire sur plusieurs lignes
@@ -21,6 +23,18 @@
 2 : 56
 3 : foo
 */
+
+// définir une fonction
+void AfficherMessage(int val, double val_d){
+  printf("Afficher valeur %d\n", val);
+  printf("Afficher valeur %.2lf\n", val_d);
+}
+
+char GetChar(){
+  char c = 'a';
+  int tutu = 12;
+  return c + tutu;
+}
 
 int main(int argc, char* argv[])
 {
@@ -43,6 +57,18 @@ int main(int argc, char* argv[])
         else
           printf("Erreur conversion impossible\n");
     }
+
+    // Type
+    int val_test_1 = 12;
+    bool res = val_test_1 > 0; // int / bool
+    bool var_b = true; // false
+
+  if( !res ){
+    printf("Val > 12\n");
+  }
+
+  AfficherMessage(45, 34.);
+  AfficherMessage(23, 7.);
 
     // ex01_calcul();
     // ex02_printf();
