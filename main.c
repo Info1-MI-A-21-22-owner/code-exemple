@@ -1,7 +1,7 @@
 #include "main.h"
 
-#include <stdio.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 /*
   Commentaire
@@ -25,19 +25,24 @@
 */
 
 // définir une fonction
-void AfficherMessage(int val, double val_d){
-  printf("Afficher valeur %d\n", val);
-  printf("Afficher valeur %.2lf\n", val_d);
+void AfficherMessage(int val, double val_d)
+{
+    printf("Afficher valeur %d\n", val);
+    printf("Afficher valeur %.2lf\n", val_d);
 }
 
-char GetChar(){
-  char c = 'a';
-  int tutu = 12;
-  return c + tutu;
+char GetChar()
+{
+    char c = 'a';
+    int tutu = 12;
+    return c + tutu;
 }
 
 int main(int argc, char* argv[])
 {
+    td_boucle(argc, argv);
+    return;
+
     printf("\n\033[1;34mTest des arguments\n\033[0;30m");
 
     int value = 0;
@@ -52,25 +57,28 @@ int main(int argc, char* argv[])
         printf("Arg 1 string : %s\n", argv[1]);
 
         int val;
-        if( sscanf(argv[1], "%d", &val) == 1 )
-          printf("Argv 1 : %d", val);
+        if (sscanf(argv[1], "%d", &val) == 1)
+            printf("Argv 1 : %d", val);
         else
-          printf("Erreur conversion impossible\n");
+            printf("Erreur conversion impossible\n");
     }
 
     // Type
     int val_test_1 = 12;
-    bool res = val_test_1 > 0; // int / bool
-    bool var_b = true; // false
+    bool res = val_test_1 > 0;  // int / bool
+    bool var_b = true;          // false
 
-  if( !res ){
-    printf("Val > 12\n");
-  }
+    if (!res)
+    {
+        printf("Val > 12\n");
+    }
 
-  AfficherMessage(45, 34.);
-  AfficherMessage(23, 7.);
+    //AfficherMessage(45, 34.);
+    //AfficherMessage(23, 7.);
 
     // ex01_calcul();
     // ex02_printf();
+    //ex_fonction();
+    
     return 0;
 }

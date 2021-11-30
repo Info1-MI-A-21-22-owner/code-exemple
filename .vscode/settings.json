@@ -10,5 +10,6 @@
     "git.autofetch": false,
     "cSpell.words": [
         "imiplicite"
-    ]
+    ],
+    "cSpell.enabled": true
 }
