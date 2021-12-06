@@ -21,7 +21,7 @@
 Comment utiliser un tableau
 ```C
 int tab[10];
-const int size_t size = sizeof(tab) / sizeof(tab[0]);
+const size_t size = sizeof(tab) / sizeof(tab[0]);
 
 ou
 
